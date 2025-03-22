@@ -9,10 +9,10 @@
 //     }
 // });
 // Query selector
-//document.querySelector("p");    // selects first p element
-//document.querySelector("#id1");  // selects first element with id=id1
-document.addEventListener("DOMContentLoaded", function(){
-let obj1 = document.querySelector(".oldImg"); //selects first element with class = myclass
-// example of using any one
- obj1.src = "https://tse1.mm.bing.net/th?id=OIP.Lo05I918j9hMgg1rkuQgnQHaEo&pid=Api&P=0&h=180";
-});
+document.querySelector("p");    // selects first p element
+document.querySelector("#id1");  // selects first element with id=id1
+ document.addEventListener("DOMContentLoaded", function(){
+ let obj1 = document.querySelector(".oldImg"); //selects first element with class = myclass
+//  example of using any one
+  obj1.src = "https://tse1.mm.bing.net/th?id=OIP.Lo05I918j9hMgg1rkuQgnQHaEo&pid=Api&P=0&h=180";
+ });
