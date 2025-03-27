@@ -17,9 +17,23 @@
 //   obj1.src = "https://tse1.mm.bing.net/th?id=OIP.Lo05I918j9hMgg1rkuQgnQHaEo&pid=Api&P=0&h=180";
 //  });
 // Using properties and methods
+// document.addEventListener("DOMContentLoaded", function(){
+// let para = document.querySelector("p");
+// // console.log(para.innerText);
+// // para.innerText = "I'm ab";
+//  para.innerHTML = "I'm <b>Ab<b>";  // we can use html tags in innerhtml
+// });
 document.addEventListener("DOMContentLoaded", function(){
-let para = document.querySelector("p");
-// console.log(para.innerText);
-// para.innerText = "I'm ab";
- para.innerHTML = "I'm <b>Ab<b>";  // we can use html tags in innerhtml
+  let image = document.querySelector("img");
+  // image.setAttribute("id", "newimage");
+  image.setAttribute("src","https://upload.wikimedia.org/wikipedia/en/b/bd/Issue252.jpg");
+});
+Manupulating style
+document.addEventListener("DOMContentLoaded", function(){
+let links = document.querySelectorAll(".box a");
+for(let i=0; i<links.length; i++){
+    links[i].style.color = "green";
+}
+let heading = document.querySelector("h1");
+heading.style.backgroundColor= "red";
 });
