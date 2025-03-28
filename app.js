@@ -23,17 +23,33 @@
 // // para.innerText = "I'm ab";
 //  para.innerHTML = "I'm <b>Ab<b>";  // we can use html tags in innerhtml
 // });
+// document.addEventListener("DOMContentLoaded", function(){
+//   let image = document.querySelector("img");
+//   // image.setAttribute("id", "newimage");
+//   image.setAttribute("src","https://upload.wikimedia.org/wikipedia/en/b/bd/Issue252.jpg");
+// });
+// // Manupulating style
+// document.addEventListener("DOMContentLoaded", function(){
+// let links = document.querySelectorAll(".box a");
+// for(let i=0; i<links.length; i++){
+//     links[i].style.color = "green";
+// }
+// let heading = document.querySelector("h1");
+// heading.style.backgroundColor= "red";
+// });
+// Using classList
+// document.addEventListener("DOMContentLoaded", function(){
+//      let heading = document.querySelector("h1");
+//      heading.classList.add("green");
+//      heading.classList.add("underline");
+// });
+// Adding elements
 document.addEventListener("DOMContentLoaded", function(){
-  let image = document.querySelector("img");
-  // image.setAttribute("id", "newimage");
-  image.setAttribute("src","https://upload.wikimedia.org/wikipedia/en/b/bd/Issue252.jpg");
-});
-Manupulating style
-document.addEventListener("DOMContentLoaded", function(){
-let links = document.querySelectorAll(".box a");
-for(let i=0; i<links.length; i++){
-    links[i].style.color = "green";
-}
-let heading = document.querySelector("h1");
-heading.style.backgroundColor= "red";
+     let newp = document.createElement("p");
+        newp.innerText = "This is new para";
+     let box = document.querySelector(".box");
+     box.appendChild(newp);
+     let btn = document.createElement("button");
+     btn.innerText = "Click me !!"
+     newp.append(btn);
 });
