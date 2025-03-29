@@ -44,12 +44,12 @@
 //      heading.classList.add("underline");
 // });
 // Adding elements
-document.addEventListener("DOMContentLoaded", function(){
-     let newp = document.createElement("p");
-        newp.innerText = "This is new para";
-     let box = document.querySelector(".box");
-     box.appendChild(newp);
-     let btn = document.createElement("button");
-     btn.innerText = "Click me !!"
-     newp.append(btn);
-});
+// document.addEventListener("DOMContentLoaded", function(){
+//      let newp = document.createElement("p");
+//         newp.innerText = "This is new para";
+//      let box = document.querySelector(".box");
+//      box.appendChild(newp);
+//      let btn = document.createElement("button");
+//      btn.innerText = "Click me !!"
+//      newp.append(btn);
+// });
