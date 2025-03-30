@@ -52,4 +52,36 @@
 //      let btn = document.createElement("button");
 //      btn.innerText = "Click me !!"
 //      newp.append(btn);
+//      Removing elements
+//      btn.remove();
+//      newp.remove();
+//    box.removeChild(newp);
 // });
+// Practice question
+//Add the following elements to the page by only using js and DOM manupulation
+//Q1. a <p> with red text that says "Hey I'm Red"
+// Q2. an h3 with blue text that says "I'm blue h3"
+// Q3. a <div> with a black border and pink background colour with the following elements inside it,
+//=> another h1 which says "I'm in a div"
+//=> a <p> which says "ME TOO !!"
+document.addEventListener("DOMContentLoaded", function(){
+  let para1 = document.createElement("p");
+  para1.innerHTML = "<b>Hey I'm Red</b>";
+  document.querySelector("body").prepend(para1);
+  para1.classList.add("Red");
+
+  let h3 = document.createElement("h3");
+  h3.innerText = "I'm blue h3";
+  document.querySelector("body").prepend(h3);
+  h3.classList.add("blue");
+ 
+  let div = document.createElement("div");
+  let h1 = document.createElement("h1");
+  let para2 = document.createElement("p");
+  h1.innerText = "I'm in a div";
+  para2.innerText = "ME TOO !!";
+   div.prepend(h1);
+   div.prepend(para2);
+  document.querySelector("body").prepend(div);
+    div.classList.add("border");
+});
