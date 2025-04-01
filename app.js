@@ -85,3 +85,17 @@
 //   document.querySelector("body").prepend(div);
 //     div.classList.add("border");
 // });
+// DOM Events
+// onclick and onmouseenter
+document.addEventListener("DOMContentLoaded", function(){
+let btns = document.querySelector(".b1");
+let btn = document.querySelector(".b2");
+    btns.addEventListener("click", sayHello);
+    btn.addEventListener("click", sayName);
+});
+function sayHello(){
+    console.log("You like this post");
+}
+function sayName(){
+    console.log("You commented");
+}
