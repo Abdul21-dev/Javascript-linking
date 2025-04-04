@@ -87,15 +87,42 @@
 // });
 // DOM Events
 // onclick and onmouseenter
-document.addEventListener("DOMContentLoaded", function(){
-let btns = document.querySelector(".b1");
-let btn = document.querySelector(".b2");
-    btns.addEventListener("click", sayHello);
-    btn.addEventListener("click", sayName);
-});
-function sayHello(){
-    console.log("You like this post");
-}
-function sayName(){
-    console.log("You commented");
-}
+// document.addEventListener("DOMContentLoaded", function(){
+// let btns = document.querySelector(".b1");
+// let btn = document.querySelector(".b2");
+//     btns.addEventListener("click", sayHello);
+//     btn.addEventListener("click", sayName);
+// });
+// function sayHello(){
+//     console.log("You like this post");
+// }
+// function sayName(){
+//     console.log("You commented");
+// }
+// let btn = document.querySelector("button");
+// document.addEventListener("DOMContentLoaded", function(){
+//     let btn = document.querySelector("button");
+// btn.addEventListener("click", function(){
+//     let h2= document.querySelector("h2");
+//     let RandomColor = getRandomColor();
+//     h2.innerText = RandomColor;
+//     let div = document.querySelector("div");
+//     div.style.backgroundColor= RandomColor;
+//     console.log("Random color generated");
+// });
+// function getRandomColor(){
+//   let  red= Math.floor(Math.random()* 255);
+//   let  green= Math.floor(Math.random()* 255);
+//   let  blue= Math.floor(Math.random()* 255);
+
+//   let color = `rgb(${red},${green},${blue})`;
+//   return color;
+// }
+// });
+// document.addEventListener("DOMContentLoaded", function(){
+// let btn = document.querySelector("Button");
+// btn.addEventListener("click", function(){
+//     console.log(this.innerText);
+//     this.style.backgroundColor = "green";
+// });
+// });
