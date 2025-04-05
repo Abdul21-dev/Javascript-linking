@@ -126,3 +126,52 @@
 //     this.style.backgroundColor = "green";
 // });
 // });
+// Keyboard events
+// document.addEventListener("DOMContentLoaded", function(){
+//     let inp = document.querySelector("input");
+//     inp.addEventListener("keydown", function(event){
+//         console.log("code is: ", event.code); //ArrowUp ArrowDown ArrowLeft ArrowRight
+//         if(event.code == "ArrowUp"){
+//             console.log("Character moves forward");
+//         }else if(event.code == "ArrowDown"){
+//             console.log("Character moves Backward");
+//         }else if(event.code == "ArrowLeft"){
+//             console.log("Character moves Left");
+//         }else if(event.code == "ArrowRight"){
+//             console.log("Character moves Right");
+//         }
+//     });
+// });
+// Form events
+// document.addEventListener("DOMContentLoaded", function(){
+//     let form = document.querySelector("form");
+//  form.addEventListener("submit", function(event){
+//      event.preventDefault();
+//      console.log("Form is submitted");
+//  });
+// });
+// Extracting data from form
+// document.addEventListener("DOMContentLoaded", function(){
+//     let form = document.querySelector("form");
+//  form.addEventListener("submit", function(event){
+//      event.preventDefault();
+//     let user = document.querySelector("#user");
+//     let pass = document.querySelector("#pass");
+//     // OR
+//     // let user = this.element[0];  // form element[0]
+//     // let pass = this.element[1];
+//     console.log(user.value);
+//     console.log(pass.value);
+//     alert(`Hi ${user.value}, your new password is ${pass.value}`);
+//  });
+// });
+// change event and input event 
+//  document.addEventListener("DOMContentLoaded", function(){
+// let inp = document.querySelector("input");
+// let p = document.querySelector("p");
+// inp.addEventListener("input", function(event){
+//       event.preventDefault();
+//       console.log(inp.value);
+//       p.innerText = inp.value;
+// });
+// });
