@@ -175,3 +175,31 @@
 //       p.innerText = inp.value;
 // });
 // });
+// TODO APP
+document.addEventListener("DOMContentLoaded", function(){
+let inp = document.querySelector("input");
+let btn = document.querySelector("button");
+let ul = document.querySelector("ul");
+
+btn.addEventListener("click", function(event){
+    event.preventDefault();
+    let items = document.createElement("li");
+    items.innerText = inp.value ;
+    let delBtn = document.createElement("Button");
+    delBtn.innerHTML = "Delete" ;
+    delBtn.classList.add("delete"); 
+    items.appendChild(delBtn);
+    
+    ul.appendChild(items);
+    console.log(inp.value);
+    console.log("Task added");
+    inp.value = "";
+});
+let delBtns = document.querySelectorAll(".delete");
+for(delBtn of delBtns){
+    delBtn.addEventListener("click", function(){
+        let par = this.parentElement;
+         par.remove();
+    });
+}
+});

@@ -32,3 +32,8 @@
       align-items: center; 
       margin-left: 430px;
    } */
+    .delete{
+      font-size: 10px;
+      height: 14px;
+      width: 40px;
+    }
