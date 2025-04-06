@@ -195,11 +195,18 @@ btn.addEventListener("click", function(event){
     console.log("Task added");
     inp.value = "";
 });
-let delBtns = document.querySelectorAll(".delete");
-for(delBtn of delBtns){
-    delBtn.addEventListener("click", function(){
-        let par = this.parentElement;
-         par.remove();
-    });
-}
+ul.addEventListener("click", function(event){
+    if(event.target.nodeName == "BUTTON"){
+        let listItems = event.target.parentElement ;
+        listItems.remove();
+        console.log("Item deleted");
+    }
 });
+// let delBtns = document.querySelectorAll(".delete");
+// for(delBtn of delBtns){
+//     delBtn.addEventListener("click", function(){
+//         let par = this.parentElement;
+//          par.remove();
+//     });
+// } 
+ });
