@@ -176,6 +176,7 @@
 // });
 // });
 // TODO APP
+console.log("todo app");
 document.addEventListener("DOMContentLoaded", function(){
 let inp = document.querySelector("input");
 let btn = document.querySelector("button");
