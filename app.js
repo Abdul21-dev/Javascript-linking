@@ -176,33 +176,33 @@
 // });
 // });
 // TO-DO APP
-console.log("todo app");
-document.addEventListener("DOMContentLoaded", function(){
-let inp = document.querySelector("input");
-let btn = document.querySelector("button");
-let ul = document.querySelector("ul");
-
-btn.addEventListener("click", function(event){
-    event.preventDefault();
-    let items = document.createElement("li");
-    items.innerText = inp.value ;
-    let delBtn = document.createElement("Button");
-    delBtn.innerHTML = "Delete" ;
-    delBtn.classList.add("delete"); 
-    items.appendChild(delBtn);
-    
-    ul.appendChild(items);
-    console.log(inp.value);
-    console.log("Task added");
-    inp.value = "";
-});
-ul.addEventListener("click", function(event){
-    if(event.target.nodeName == "BUTTON"){
-        let listItems = event.target.parentElement ;
-        listItems.remove();
-        console.log("Item deleted");
-    }
-});
+// console.log("todo app");
+// document.addEventListener("DOMContentLoaded", function(){
+// let inp = document.querySelector("input");
+// let btn = document.querySelector("button");
+// let ul = document.querySelector("ul");
+// btn.addEventListener("click", function(event){
+//     event.preventDefault();
+//     let items = document.createElement("li");
+//     items.innerText = inp.value ;
+//     let delBtn = document.createElement("Button");
+//     delBtn.innerHTML = "Delete" ;
+//     delBtn.classList.add("delete"); 
+//     items.appendChild(delBtn);
+//     ul.appendChild(items);
+//     console.log(inp.value);
+//     console.log("Task added");
+//     inp.value = "";
+// });
+// parent element ko select karne par naye added task ke liye bhi delete button kaam karega
+// ul.addEventListener("click", function(event){
+//     if(event.target.nodeName == "BUTTON"){
+//         let listItems = event.target.parentElement ;
+//         listItems.remove();
+//         console.log("Item deleted");
+//     }
+// });
+// below delete button works for only existing task which are already written in html page
 // let delBtns = document.querySelectorAll(".delete");
 // for(delBtn of delBtns){
 //     delBtn.addEventListener("click", function(){
@@ -210,4 +210,51 @@ ul.addEventListener("click", function(event){
 //          par.remove();
 //     });
 // } 
- });
+//  });
+
+// Using API request
+let url = "https://catfact.ninja/fact";
+//   fetch(url)
+//   .then((res)=>{
+//     return res.json();
+//   })
+//   .then((data)=>{
+//     console.log("Fact 1 :", data.fact);
+//     return fetch(url);
+//   })
+//   .then((res)=>{
+//     return res.json();
+//   })
+//   .then((data)=>{
+//     console.log("Fact 2 :", data.fact);
+//     return fetch(url);
+//   })
+//   .then((res)=>{
+//     return res.json();
+//   })
+//   .then((data)=>{
+//     console.log("Fact 3:", data.fact);
+//   })
+//   .catch((err)=>{
+//     console.log("ERROR-", err);
+//   });
+
+async function getFact() {
+    try{
+    let res1 = await fetch(url);
+    let data1 = await res1.json();
+    console.log("fact 1:", data1.fact);
+
+    let res2 = await fetch(url);
+    let data2 = await res2.json();
+    console.log("fact 2:", data2.fact);
+
+    let res3 = await fetch(url);
+    let data3 = await res3.json();
+    console.log("fact 3:", data3.fact);
+    }
+    catch(err){
+        console.log("ERROR-", err);
+    }
+};
+console.log(getFact());
