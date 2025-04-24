@@ -213,7 +213,7 @@
 //  });
 
 // Using API request
-let url = "https://catfact.ninja/fact";
+// let url = "https://catfact.ninja/fact";
 //   fetch(url)
 //   .then((res)=>{
 //     return res.json();
@@ -239,22 +239,40 @@ let url = "https://catfact.ninja/fact";
 //     console.log("ERROR-", err);
 //   });
 
-async function getFact() {
-    try{
-    let res1 = await fetch(url);
-    let data1 = await res1.json();
-    console.log("fact 1:", data1.fact);
+// async function getFact() {
+//     try{
+//     let res1 = await fetch(url);
+//     let data1 = await res1.json();
+//     console.log("fact 1:", data1.fact);
 
-    let res2 = await fetch(url);
-    let data2 = await res2.json();
-    console.log("fact 2:", data2.fact);
+//     let res2 = await fetch(url);
+//     let data2 = await res2.json();
+//     console.log("fact 2:", data2.fact);
 
-    let res3 = await fetch(url);
-    let data3 = await res3.json();
-    console.log("fact 3:", data3.fact);
+//     let res3 = await fetch(url);
+//     let data3 = await res3.json();
+//     console.log("fact 3:", data3.fact);
+//     }
+//     catch(err){
+//         console.log("ERROR-", err);
+//     }
+// };
+// console.log(getFact());
+document.addEventListener("DOMContentLoaded", function(){
+    let btn = document.querySelector("button");
+    btn.addEventListener("click", async ()=>{
+          let fact = await getFact();
+          let p = document.querySelector("#result");
+          p.innerText = fact;
+    });
+    let url = "https://catfact.ninja/fact";
+    async function getFact(){
+        try{
+        let res = await axios.get(url);
+        return res.data.fact;
     }
-    catch(err){
-        console.log("ERROR-", err);
+catch(err){
+    console.log("ERROR-", err);
+}
     }
-};
-console.log(getFact());
+});
