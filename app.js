@@ -258,21 +258,49 @@
 //     }
 // };
 // console.log(getFact());
-document.addEventListener("DOMContentLoaded", function(){
-    let btn = document.querySelector("button");
-    btn.addEventListener("click", async ()=>{
-          let fact = await getFact();
-          let p = document.querySelector("#result");
-          p.innerText = fact;
-    });
-    let url = "https://catfact.ninja/fact";
-    async function getFact(){
-        try{
-        let res = await axios.get(url);
-        return res.data.fact;
+// document.addEventListener("DOMContentLoaded", function(){
+//     let btn = document.querySelector("button");
+//     btn.addEventListener("click", async ()=>{
+//           let fact = await getFact();
+//           let p = document.querySelector("#result");
+//           p.innerText = fact;
+//     });
+//     let url = "https://catfact.ninja/fact";
+//     async function getFact(){
+//         try{
+//         let res = await axios.get(url);
+//         return res.data.fact;
+//     }
+// catch(err){
+//     console.log("ERROR-", err);
+// }
+//     }
+// });
+// document.addEventListener("DOMContentLoaded", function(){
+//     let btn = document.querySelector("button");
+//     btn.addEventListener("click", async ()=>{
+//          let link = await getImage();
+//          let img = document.querySelector("#result");
+//          img.setAttribute("src", link);
+//     });
+//     let url = "https://dog.ceo/api/breeds/image/random";
+//     async function getImage(){
+//         try{
+//             let res = await axios.get(url);
+//             return res.data.message ;
+//         }catch(err){
+//             console.log("ERROR -", err);
+//         }
+//     }
+// });
+ let url = "https://icanhazdadjoke.com/";
+ async function getJokes(){
+    const config = {headers: {Accept: "application/json"}};
+    try{
+    let res = await axios.get(url, config);
+    console.log(res.data);
+    }catch(err){
+        console.log("ERROR-", err);
     }
-catch(err){
-    console.log("ERROR-", err);
-}
-    }
-});
+ }
+ getJokes();
