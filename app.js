@@ -304,34 +304,34 @@
 //     }
 //  }
 //  getJokes();
-// document.addEventListener("DOMContentLoaded", function(){
-//     let btn = document.querySelector("button");
-//     let url = "http://universities.hipolabs.com/search?name=";
-//     btn.addEventListener("click", async ()=>{
-//     let country = document.querySelector("input").value;
-//     console.log(country);
-//     document.querySelector("input").value = "";
-//    // getCollege(country);
-//     let collArr = await getCollege(country);
-//     Show(collArr);
-//     function Show(colArr){
-//         list.innerText = "";  
-//         for(col of colArr){
-//         let list = document.querySelector("#list");
-//             console.log(col.name);
-//         let li = document.createElement("li");
-//         li.innerText = col.name ;
-//         list.appendChild(li);   
-//         }
-//     }
-//     });
-// async function getCollege(country){
-//     try{
-//     let res = await axios.get(url+ encodeURIComponent(country));
-//     return res.data;
-//     }catch(err){
-//         console.log("ERROR-", err);
-//         return [];
-//     }
-// }
-// });
+document.addEventListener("DOMContentLoaded", function(){
+    let btn = document.querySelector("button");
+    let url = "http://universities.hipolabs.com/search?name=";
+    btn.addEventListener("click", async ()=>{
+    let country = document.querySelector("input").value;
+    console.log(country);
+    document.querySelector("input").value = "";
+   // getCollege(country);
+    let collArr = await getCollege(country);
+    Show(collArr);
+    function Show(colArr){
+        list.innerText = "";  
+        for(col of colArr){
+        let list = document.querySelector("#list");
+            console.log(col.name);
+        let li = document.createElement("li");
+        li.innerText = col.name ;
+        list.appendChild(li);   
+        }
+    }
+    });
+async function getCollege(country){
+    try{
+    let res = await axios.get(url+ encodeURIComponent(country));
+    return res.data;
+    }catch(err){
+        console.log("ERROR-", err);
+        return [];
+    }
+}
+});
